@@ -2,6 +2,7 @@ import React from 'react';
 import '../style/Header.css';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 
 
@@ -11,7 +12,7 @@ const Header = () => {
         <nav className="header">
             <Link to="/">
             <img
-                className="header__logo" 
+                className="header__logo"
                 src="https://user-images.githubusercontent.com/73184313/127357168-a7ff7bd7-6ddd-489f-bf13-e43e764118b2.png" 
                 alt='ecommerce website logo' />
             </Link>
@@ -22,26 +23,31 @@ const Header = () => {
             <div className="header__nav" >
                 <Link to="/Login" className="header__link">
                     <div className="header__option">
-                        <span>Hello ${}</span>
-                        <span>Sign In</span>
+                        <span className="header__optionLineOne">Hello</span>
+                        <span className="header__optionLineTwo">Sign In</span>
                     </div>
                 </Link>
 
-                <Link to="" className="header__link" >
+                <Link to="/" className="header__link" >
                     <div className="header__option">
-                        <span>Returns</span>
-                        <span>& Orders</span>
+                        <span className="header__optionLineOne">Returns</span>
+                        <span className="header__optionLineTwo">& Orders</span>
                     </div>
                 </Link>
 
-                <Link to="" className="header__link" >
+                <Link to="/" className="header__link" >
                     <div className="header__option">
-                        <span>Your</span>
-                        <span>Profile</span>
+                        <span className="header__optionLineOne">Your</span>
+                        <span className="header__optionLineTwo">Profile</span>
                     </div>
                 </Link>
 
-                {/* 4th Link */}
+                <Link to="/checkout" className="header__link">
+                    <div className="header__optionBasket">
+                        <ShoppingBasketIcon />
+                        <span className="header__optionLineTwo header__basketCount">0</span>
+                    </div>
+                </Link>
             </div>
         </nav>
     )
