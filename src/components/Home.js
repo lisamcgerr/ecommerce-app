@@ -13,7 +13,7 @@ const Home = () => {
                 className="home__image"
                 src="https://user-images.githubusercontent.com/73184313/127373370-a925e758-eba5-461f-834e-2fe14498a6e1.jpg"
                 alt="grey paint background" />
-                <div className='home__row'>
+                <div className="home__row">
                     <Product
                         id='12321341'
                         title='Manifest Now'
@@ -29,7 +29,7 @@ const Home = () => {
                         image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
                     />
                 </div>
-                <div className='home__row'>
+                <div className="home__row">
                     <Product
                         id="4903850"
                         title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
@@ -52,7 +52,7 @@ const Home = () => {
                         image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
                     />
                 </div>
-                <div className='home__row'>
+                <div className="home__row">
                     <Product
                         id="90829332"
                         title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
