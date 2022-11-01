@@ -1,15 +1,20 @@
 export const initialState = {
-    basket: []
+    basket: [],
+    user: null
 };
 
 const reducer = (state, action) => {
+    // @TODO remove console.log
+    console.log(action, state);
     switch(action.type) {
         case 'ADD_TO_BASKET':
-            //logic
-            break;
+            return {
+                ...state,
+                basket: [ ...state.basket, action.payload ]
+            };
         case 'REMOVE_FROM_BASKET':
             //logic
-            break;
+            return { state };
         default:
             return state;
     }
