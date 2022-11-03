@@ -13,8 +13,13 @@ const reducer = (state, action) => {
                 basket: [ ...state.basket, action.payload ]
             };
         case 'REMOVE_FROM_BASKET':
-            //logic
-            return { state };
+            var updatedBasket = [ ...state.basket ];
+            var index = state.basket.findIndex(item => item.id === action.payload)
+            index > -1 ? updatedBasket.splice(index, 1) : console.warn(`Cannot remove product(id: ${action.payload}) as it is NOT in the basket`);
+            return {
+                ...state,
+                basket: updatedBasket
+            }
         default:
             return state;
     }
