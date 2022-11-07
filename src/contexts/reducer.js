@@ -3,6 +3,30 @@ export const initialState = {
     user: null
 };
 
+// @TODO remove test initialState
+// export const initialState = {
+//     basket: [
+//         {   id: '12321341',
+//             title: 'Manifest Now',
+//             price: 19.99,
+//             rating: 4,
+//             image: 'https://user-images.githubusercontent.com/73184313/127376246-797c1001-b49b-4ec3-ab40-c8ecef78a89e.jpg'
+//         },
+//         {   id: '49538094',
+//             title: 'Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl',
+//             price: 239.0,
+//             rating: 4,
+//             image: 'https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg'
+//         }
+//     ],
+//     user: null
+// }
+
+export const getBasketTotal = (basket) => {
+    return basket?.reduce((totalAmount, item) =>
+        totalAmount + item.price, 0)
+}
+
 const reducer = (state, action) => {
     // @TODO remove console.log
     console.log(action, state);
