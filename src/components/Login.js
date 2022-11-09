@@ -6,6 +6,14 @@ const Login = () => {
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
 
+    const signIn = e => {
+        e.preventDefault();
+    }
+
+    const register = e => {
+        e.preventDefault();
+    }
+
     return (
         <div className="login">
             <Link to="/">
@@ -31,10 +39,19 @@ const Login = () => {
                         onChange={e => setPassword(e.target.value)}
                         type="password" />
 
-                    <button className="login__signInButton">Sign In</button>
+                    <button
+                        type="submit"
+                        className="login__signInButton"
+                        onClick={signIn}>
+                            Sign In
+                    </button>
                 </form>
                 <p className="login__conditions">By signing-in you agree & accept the ECOMMERCE WEBSITE Conditions of Use & Sale.</p>
-                <button className="login__registerButton">Create Account</button>
+                <button
+                    className="login__registerButton"
+                    onClick={register}>
+                        Create Account
+                </button>
             </div>
         </div>
     )
