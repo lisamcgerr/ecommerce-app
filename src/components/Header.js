@@ -25,7 +25,7 @@ const Header = () => {
                 <SearchIcon className="header__searchIcon" />
             </div>
             <div className="header__nav" >
-                <Link to="/Login" className="header__link">
+                <Link to="/login" className="header__link">
                     <div className="header__option">
                         <span className="header__optionLineOne">Hello</span>
                         <span className="header__optionLineTwo">Sign In</span>
